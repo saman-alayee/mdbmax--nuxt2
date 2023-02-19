@@ -3,8 +3,8 @@
     
     <TheHeader @sidenavToggle="displaySidenav = !displaySidenav" />
     <TheSidenav :show="displaySidenav" @close="displaySidenav = false" />
-    <v-container><Nuxt />
-    </v-container>
+    <div><Nuxt />
+    </div>
     <Footer/>
   </div>
 </template>
