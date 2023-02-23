@@ -19,15 +19,15 @@ export default {
 
 <style scoped>
 .inside-btn {
-  background-color: var(--green);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--black);
   padding: 8px 24px;
   border-radius: 24px;
   border: none;
   font-size: 1rem;
 }
 button:hover {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--green);
+  color: var(--white);
 }
 </style>
