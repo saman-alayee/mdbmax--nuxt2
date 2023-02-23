@@ -1,7 +1,6 @@
 <template>
   <div class="base-card-container">
     <slot name="content"></slot>
-    img
   </div>
 </template>
 

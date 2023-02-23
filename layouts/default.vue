@@ -1,11 +1,8 @@
 <template>
   <div>
-    
     <TheHeader @sidenavToggle="displaySidenav = !displaySidenav" />
     <TheSidenav :show="displaySidenav" @close="displaySidenav = false" />
-    <div><Nuxt />
-    </div>
-    <Footer/>
+    <div class="container-fluid"><Nuxt /></div>
   </div>
 </template>
 
@@ -16,7 +13,7 @@ import TheSidenav from "@/components/pagecomponents/Navigation/TheSidenav";
 export default {
   components: {
     TheHeader,
-    TheSidenav
+    TheSidenav,
   },
   data() {
     return {

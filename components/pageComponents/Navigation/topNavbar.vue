@@ -3,7 +3,6 @@
     <header class="box-header">
       <div class="navigation-items">
         <ul class="nav-list">
-          
           <li class="nav-item"><nuxt-link to="/Login">get 50% off on selected item    |    shop now  </nuxt-link></li>
         </ul>
       </div>
