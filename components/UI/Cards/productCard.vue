@@ -1,16 +1,18 @@
 <template>
   <div class="card inside-card mb-3">
     <img
-      class="card-img-top"
-      src="https://www.cnet.com/a/img/resize/290a500ee159b4bbfea874249f3dd7dc7ec1b640/hub/2022/08/19/ff5be1ca-b102-485c-8eb9-4ad229bd3dea/sennheiser-momentum-4-wireless-yellow-background.png?auto=webp&fit=crop&height=528&width=940"
+      class="card-img-top image-size"
+      :src="image"
       alt="Card image cap"
     />
     <div class="card-body">
-      <h5 class="card-title">{{ title }}</h5>
-      <p class="card-text">{{ describe }}</p>
-      
+      <div class="price-section">
+        <h5 class="card-title">{{ title }}</h5>
+        <h5>{{price}}</h5>
+        </div>
+         <p class="card-text">{{ describe }}</p>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -25,6 +27,14 @@ export default {
       type: String,
       required: true,
     },
+    image: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>
@@ -34,5 +44,14 @@ export default {
   background-color: var(--white);
   border-radius: 8px;
   border: none;
+}
+.price-section {
+  display: flex;
+  justify-content: space-between ;
+}
+.image-size{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 </style>

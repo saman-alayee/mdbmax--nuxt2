@@ -3,7 +3,9 @@
     <header class="box-header">
       <div class="navigation-items">
         <ul class="nav-list">
+          <li class="nav-item"><nuxt-link to="/Login">+02154858592  </nuxt-link></li>
           <li class="nav-item"><nuxt-link to="/Login">get 50% off on selected item    |    shop now  </nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="/Login"> Login  </nuxt-link></li>
         </ul>
       </div>
     </header>
@@ -19,7 +21,7 @@ export default {};
   width: 100%;
   height: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: var(--green);
   z-index: 100;
@@ -31,7 +33,7 @@ export default {};
   padding: 44px;
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .nav-item {

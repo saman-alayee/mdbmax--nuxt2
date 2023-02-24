@@ -23,7 +23,7 @@ export default {
   color: var(--black);
   padding: 8px 24px;
   border-radius: 24px;
-  border: none;
+  border: 1px solid var(--black);
   font-size: 1rem;
 }
 button:hover {

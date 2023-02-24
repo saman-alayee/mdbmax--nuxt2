@@ -29,5 +29,6 @@ export default {
 button:hover {
   background-color: var(--white);
   color: var(--black);
+  border:1px solid var(--black);
 }
 </style>
