@@ -14,17 +14,25 @@
         <baseButton class="mt-4" text="Buy Now" color="var(--white)" />
       </div>
     </div>
-    <baseChip text="Filter Product" first-item="Time" third-item="Price" second-item="Popular" />
+    <div class="container">
+      <baseChip
+        text="Filter Product"
+        first-item="Time"
+        third-item="Price"
+        second-item="Popular"
+      />
       <h2>New Product</h2>
-    <div class="row">
-      <div class="col-lg-3 mt-4" v-for="card in cards" :key="card.title">
-        <productCard
-          :title="card.title"
-          :describe="card.describe"
-          :image="card.image" :price="card.price"
-        />
-        <productButton text="Add to Cart" />
-        <baseButton text="More" />
+      <div class="row">
+        <div class="col-lg-3 mt-4" v-for="card in cards" :key="card.title">
+          <productCard
+            :title="card.title"
+            :describe="card.describe"
+            :image="card.image"
+            :price="card.price"
+          />
+          <productButton text="Add to Cart" />
+          <baseButton text="More" />
+        </div>
       </div>
     </div>
   </div>
@@ -41,56 +49,63 @@ export default {
     baseButton,
     productCard,
     productButton,
-    baseChip
+    baseChip,
   },
   data() {
     return {
       cards: [
         {
           title: "Lorem ipsum dolor sit",
-          price:"250$",
+          price: "250$",
           describe: "Lorem ipsum dolor sit Lorem ipsum dolor sit",
           image:
             "https://www.cnet.com/a/img/resize/290a500ee159b4bbfea874249f3dd7dc7ec1b640/hub/2022/08/19/ff5be1ca-b102-485c-8eb9-4ad229bd3dea/sennheiser-momentum-4-wireless-yellow-background.png?auto=webp&fit=crop&height=528&width=940",
         },
         {
-          title: "Lorem ipsum dolor sit",price:"250$",
+          title: "Lorem ipsum dolor sit",
+          price: "250$",
           describe: "Lorem ipsum dolor sit Lorem ipsum dolor sit",
           image:
             "https://www.cnet.com/a/img/resize/290a500ee159b4bbfea874249f3dd7dc7ec1b640/hub/2022/08/19/ff5be1ca-b102-485c-8eb9-4ad229bd3dea/sennheiser-momentum-4-wireless-yellow-background.png?auto=webp&fit=crop&height=528&width=940",
         },
         {
-          title: "Lorem ipsum dolor sit",price:"250$",
+          title: "Lorem ipsum dolor sit",
+          price: "250$",
           describe: "Lorem ipsum dolor sit Lorem ipsum dolor sit",
           image:
             "https://www.cnet.com/a/img/resize/290a500ee159b4bbfea874249f3dd7dc7ec1b640/hub/2022/08/19/ff5be1ca-b102-485c-8eb9-4ad229bd3dea/sennheiser-momentum-4-wireless-yellow-background.png?auto=webp&fit=crop&height=528&width=940",
         },
         {
-          title: "Lorem ipsum dolor sit",price:"250$",
+          title: "Lorem ipsum dolor sit",
+          price: "250$",
           describe: "Lorem ipsum dolor sit Lorem ipsum dolor sit",
           image:
             "https://www.cnet.com/a/img/resize/290a500ee159b4bbfea874249f3dd7dc7ec1b640/hub/2022/08/19/ff5be1ca-b102-485c-8eb9-4ad229bd3dea/sennheiser-momentum-4-wireless-yellow-background.png?auto=webp&fit=crop&height=528&width=940",
         },
         {
-          title: "Lorem ipsum dolor sit",price:"250$",
+          title: "Lorem ipsum dolor sit",
+          price: "250$",
           describe: "Lorem ipsum dolor sit Lorem ipsum dolor sit",
           image:
             "https://www.cnet.com/a/img/resize/290a500ee159b4bbfea874249f3dd7dc7ec1b640/hub/2022/08/19/ff5be1ca-b102-485c-8eb9-4ad229bd3dea/sennheiser-momentum-4-wireless-yellow-background.png?auto=webp&fit=crop&height=528&width=940",
         },
         {
-          title: "Lorem ipsum dolor sit",price:"250$",
+          title: "Lorem ipsum dolor sit",
+          price: "250$",
           describe: "Lorem ipsum dolor sit Lorem ipsum dolor sit",
           image:
             "https://www.cnet.com/a/img/resize/290a500ee159b4bbfea874249f3dd7dc7ec1b640/hub/2022/08/19/ff5be1ca-b102-485c-8eb9-4ad229bd3dea/sennheiser-momentum-4-wireless-yellow-background.png?auto=webp&fit=crop&height=528&width=940",
         },
         {
-          title: "Lorem ipsum dolor sit",price:"250$",
+          title: "Lorem ipsum dolor sit",
+          price: "250$",
           describe: "Lorem ipsum dolor sit Lorem ipsum dolor sit",
           image:
             "https://cryptopotato.com/wp-content/uploads/2021/04/xrpusd-apr5.png",
         },
         {
-          title: "Lorem ipsum dolor sit",price:"250$",
+          title: "Lorem ipsum dolor sit",
+          price: "250$",
           describe: "Lorem ipsum dolor sit Lorem ipsum dolor sit",
           image:
             "https://v2.cimg.co/news/99306/246426/responsive-images/impt-2___media_library_original_1827_877.jpg",
