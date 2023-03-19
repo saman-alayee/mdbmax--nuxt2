@@ -1,10 +1,10 @@
 <template>
   <div class="main">
-    <TheHeader  />
-   
-    <div><Nuxt /></div>
-   <div class="mt-3"></div> 
+    <TheHeader />
 
+    <div class="container">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
@@ -13,10 +13,10 @@ import TheHeader from "@/components/pagecomponents/Navigation/TheHeader";
 
 export default {
   components: {
-    TheHeader  },
+    TheHeader,
+  },
   data() {
-    return {
-    };
+    return {};
   },
 };
 </script>
@@ -26,7 +26,12 @@ html {
 }
 .main {
   margin: 0;
-  height: 100vh;
+  height: 100%;
+   padding-bottom: 7rem;
   background-color: var(--light--green) !important;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
 }
 </style>

@@ -4,7 +4,8 @@
     <img src="@/assets/images/main-logo.png" width="250" alt="">
   </a>
   <div>
-  <base-button text="Login"/>
+  <nuxt-link to="/"><base-button text="Login" /></nuxt-link>
+  <base-button text="Language"/>
   </div>
 </nav>
 </template>

@@ -1,41 +1,104 @@
 <template>
-  <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <div class="login-container">
+    <div class="logo-container">
+      <img src="@/assets/images/main-logo.png" width="250" alt="" />
+    </div>
+
+    <base-card>
+      <template slot="content"
+        ><form class="p-4">
+          <h4>Your account</h4>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input
+              type="text"
+              class="form-control input-style"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              v-model="username"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              class="form-control input-style"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              v-model="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control input-style"
+              id="exampleInputPassword1"
+              v-model="password"
+            />
+          </div>
+
+          </form
+      >  <div class="p-4"><button class="inside-btn w-100" type="button" @click="storeData">Continue</button></div></template>
+    </base-card>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 </template>
 
 <script>
-import axios from 'axios'
+import baseCard from "../../UI/Cards/baseCard.vue";
 export default {
-created() {
-    axios
-      .post("https://reqres.in/api/register/", {
-        uid: "ddddd",
-        token: "ddd",
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  components: { baseCard },
+  data() {
+    return {
+      username: "",
+      email: "",
+      password: "",
+    };
   },
-}
+  methods: {
+    storeData() {
+      this.$store.dispatch("login/setItems", {
+        email: this.email,
+        password: this.password,
+        username: this.username,
+      });
+      console.log('ssss')
+    },
+  },
+};
 </script>
 
-<style>
-
+<style scoped>
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.input-style {
+  background-color: var(--dark--green);
+}
+label {
+  font-size: 18px;
+}
+input[type="email"] {
+  color: var(--white);
+}
+input[type="text"] {
+  color: var(--white);
+}
+input[type="password"] {
+  color: var(--white);
+}
+.inside-btn {
+  background-color: var(--yellow);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.inside-btn:hover {
+  background-color: rgb(255, 247, 0);
+}
 </style>

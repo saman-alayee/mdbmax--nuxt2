@@ -1,12 +1,16 @@
 <template>
-  <p>salam</p>
+ <div>
+    <TheLogin/> </div>
 </template>
 
 <script>
-import TheHome from '../components/pageComponents/Main/TheHome.vue';
+import TheLogin from '../components/pageComponents/Auth/TheLogin.vue';
+
 export default {
-  name: "IndexPage",
-  components: { TheHome },
-  
-};
+    components: { TheLogin }
+}
 </script>
+
+<style>
+
+</style>

@@ -1,15 +1,17 @@
 <template>
   <button
     v-if="outline"
-    :style="`background: ${backgroundColor}`"
+    :style="`background-color: ${backgroundColor}; color: ${textColor}`"
     class="inside-outline-btn"
+    type="button"
   >
     {{ text }}
   </button>
   <button
     v-else
-    :style="`background-color: ${backgroundColor}`"
+    :style="`background-color: ${backgroundColor}; color: ${textColor}`"
     class="inside-btn"
+    type="button"
   >
     {{ text }}
   </button>
@@ -31,11 +33,15 @@ export default {
     backgroundColor: {
       type: String,
     },
+    textColor:{
+      type:String,
+    },
     outline: {
       type: Boolean,
       default: false,
     },
   },
+ 
 };
 </script>
 

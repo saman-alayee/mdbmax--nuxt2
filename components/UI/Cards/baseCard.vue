@@ -1,20 +1,28 @@
 <template>
-  <div class="base-card-container">
+  <div class="base-card-container"  >
     <slot name="content"></slot>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props:{
+    borderTop:{
+      type:String,
+      
+    }
+  }
+};
 </script>
 
 <style scoped>
 .base-card-container {
-    width: 100%;
-    height: 100%;
-    background-color: var(--white);
-    padding: 16px;
-    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.05);
-	border-radius: 20px;
+  background-color: var(--dark--green);
+  padding: 24px;
+  margin: 64px;
+  color: var(--white);
+  box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+
 }
 </style>
