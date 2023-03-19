@@ -1,26 +1,21 @@
 <template>
-  <div>
-    <TheHeader @sidenavToggle="displaySidenav = !displaySidenav" />
-    <TheSidenav :show="displaySidenav" @close="displaySidenav = false" />
+  <div class="main">
+    <TheHeader  />
+   
     <div><Nuxt /></div>
-   <div class="mt-3"><Footer /></div> 
+   <div class="mt-3"></div> 
 
   </div>
 </template>
 
 <script>
 import TheHeader from "@/components/pagecomponents/Navigation/TheHeader";
-import TheSidenav from "@/components/pagecomponents/Navigation/TheSidenav";
-import Footer from "@/components/pagecomponents/Footer/index.vue";
 
 export default {
   components: {
-    TheHeader,
-    TheSidenav,Footer
-  },
+    TheHeader  },
   data() {
     return {
-      displaySidenav: false,
     };
   },
 };
@@ -29,9 +24,9 @@ export default {
 html {
   font-size: 30px;
 }
-body {
+.main {
   margin: 0;
-  font-size: 30px;
-  background-color: var(--blue);
+  height: 100vh;
+  background-color: var(--light--green) !important;
 }
 </style>

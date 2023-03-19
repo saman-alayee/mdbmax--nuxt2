@@ -1,5 +1,5 @@
 <template>
-  <TheHome/>
+  <p>salam</p>
 </template>
 
 <script>
