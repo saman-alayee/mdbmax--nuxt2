@@ -27,8 +27,8 @@
                   type="radio"
                   name="exampleRadios"
                   id="exampleRadios1"
-                  value="option1"
-                  checked
+                  value="2-xVbNjHStmfKSCM6Kit5pEsS2gSuXieCdGutB"
+                  v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios1">
                   1 day subscription:$2.00/day
@@ -49,6 +49,7 @@
                 textColor="var(--white)"
                 outline="true"
                 text="Continue"
+                @click="setProduct"
               />
             </div>
           </div>
@@ -120,6 +121,25 @@ import BaseButton from "../../UI/Button/baseButton.vue";
 
 export default {
   components: { BaseCard, BaseButton },
+  data() {
+    return {
+      product: "",
+      productID: "",
+      nameID: "",
+    };
+  },
+  methods: {
+    setProduct() {
+      this.productID = parseInt(this.product.split("-")[0]);
+      this.nameID = this.product.split("-")[1];
+      console.log(typeof this.productId);
+      this.$store.dispatch("login/setId", {
+        productID: this.productID,
+        nameID: this.nameID,
+      });
+      this.$store.dispatch("login/loadItems");
+    },
+  },
 };
 </script>
 
@@ -155,12 +175,11 @@ input[type="radio"]:checked {
   align-items: center;
   flex: 1;
 }
-  @media (max-width: 768px) {
-    .mobile-size {
-      display: none;
-    }
+@media (max-width: 768px) {
+  .mobile-size {
+    display: none;
   }
-
+}
 
 .stepper-item::before {
   position: absolute;

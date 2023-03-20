@@ -27,8 +27,9 @@
                   type="radio"
                   name="exampleRadios"
                   id="exampleRadios1"
-                  value="3-BI2sXjqTkFM5OURU7rxdhzxZngtFOXkHjkLO"
+                  value="7-6JvVP0jtQ3KbyywZcaEqdVucpoYQtmt5yQyN"
                   v-model="product"
+                  
                 />
                 <label class="form-check-label" for="exampleRadios1">
                   1 month subscription:$5.00/day
@@ -40,7 +41,7 @@
                   type="radio"
                   name="exampleRadios"
                   id="exampleRadios2"
-                  value="4-tSwFGj9l9jv9ZnDefxkzY9pRhajKB3Wq5KCF"
+                  value="8-W1UIqwhUBxL6UViryNZTqoVmPFpyzVD5U0Yk"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios2">
@@ -53,7 +54,7 @@
                   type="radio"
                   name="exampleRadios"
                   id="exampleRadios3"
-                  value="5-3auFdJK1JuVPeRvXdJGpU71xRK45mHA46cOE"
+                  value="9-CfL26TqUjJJ1uhFDxZ7ocOJmeHxKQEQ0K4LP"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios3">
@@ -66,7 +67,7 @@
                   type="radio"
                   name="exampleRadios"
                   id="exampleRadios4"
-                  value="6-yGPIyRere48qKQOLZdOevxztO5hh0mOVBiZb"
+                  value="10-cmN3G7OKds7ZMZIS8FNK6818efJ3VkBnc8rC"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios3">

@@ -4,6 +4,8 @@
     :style="`background-color: ${backgroundColor}; color: ${textColor}`"
     class="inside-outline-btn"
     type="button"
+    v-bind="$attrs"
+		v-on="$listeners"
   >
     {{ text }}
   </button>
@@ -12,6 +14,8 @@
     :style="`background-color: ${backgroundColor}; color: ${textColor}`"
     class="inside-btn"
     type="button"
+    v-bind="$attrs"
+		v-on="$listeners"
   >
     {{ text }}
   </button>

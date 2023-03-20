@@ -74,7 +74,7 @@ export default {
           feature_five: "No AD",
           feature_six:"Priority Support in 24H",
           boderTop:false,
-          link:'permiumPlan'
+          link:'businessPlan'
         },
       ],
     };

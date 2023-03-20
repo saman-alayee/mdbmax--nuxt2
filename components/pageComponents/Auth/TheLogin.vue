@@ -37,15 +37,21 @@
               v-model="password"
             />
           </div>
-
-          </form
-      >  <div class="p-4"><button class="inside-btn w-100" type="button" @click="storeData">Continue</button></div></template>
+        </form>
+        <div class="p-4">
+          <button class="inside-btn w-100" type="button" @click="storeData">
+            Continue
+          </button>
+        </div></template
+      >
     </base-card>
   </div>
 </template>
 
 <script>
 import baseCard from "../../UI/Cards/baseCard.vue";
+import Swal from "sweetalert2";
+
 export default {
   components: { baseCard },
   data() {
@@ -57,12 +63,22 @@ export default {
   },
   methods: {
     storeData() {
-      this.$store.dispatch("login/setItems", {
-        email: this.email,
-        password: this.password,
-        username: this.username,
-      });
-      console.log('ssss')
+      if ((this.username == "") | (this.password == "") | (this.email == "")) {
+        Swal.fire({
+          title: "Error!",
+          text: "Please filled your form",
+          icon: "error",
+          confirmButtonText: "Okay",
+          confirmButtonColor: "red",
+        });
+      } else {
+        this.$store.dispatch("login/setItems", {
+          email: this.email,
+          password: this.password,
+          username: this.username,
+        });
+        this.$router.push("/pricing");
+      }
     },
   },
 };

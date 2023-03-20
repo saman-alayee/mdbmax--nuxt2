@@ -2,6 +2,9 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mdbmax',
+    script: [
+      { src: 'https://js.stripe.com/v3' },
+    ],
     htmlAttrs: {
       lang: 'en'
     },
@@ -37,12 +40,18 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
   ],
+  env: {
+    STRIPE_PK: process.env.STRIPE_PK,
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt', '@nuxtjs/axios', '@nuxtjs/i18n',
+    'bootstrap-vue/nuxt', '@nuxtjs/axios', '@nuxtjs/i18n', 'nuxt-sweetalert2'
+
+    
   ],
+
   i18n: {
     locales: ['en', 'fa'],
     defaultLocale: 'en',
