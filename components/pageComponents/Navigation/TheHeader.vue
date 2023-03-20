@@ -4,8 +4,12 @@
     <img src="@/assets/images/main-logo.png" width="250" alt="">
   </a>
   <div>
-  <nuxt-link to="/"><base-button text="Login" /></nuxt-link>
-  <base-button text="Language"/>
+   <b-dropdown text="Language" variant="light" class="m-1"  style="height: 42px;">
+      <b-dropdown-item-button><nuxt-link :to="switchLocalePath('en')">English</nuxt-link></b-dropdown-item-button>
+      <b-dropdown-item-button><nuxt-link :to="switchLocalePath('fa')">Persian</nuxt-link></b-dropdown-item-button>
+    </b-dropdown>
+  <nuxt-link to="/"><base-button style="font-size:1rem;" :text="$t('login')" /></nuxt-link>
+  
   </div>
 </nav>
 </template>

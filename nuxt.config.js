@@ -23,6 +23,7 @@ export default {
     '~/assets/style/app.css', '@fortawesome/fontawesome-svg-core/styles.css'
 
   ],
+  
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -40,8 +41,25 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt', '@nuxtjs/axios'
+    'bootstrap-vue/nuxt', '@nuxtjs/axios', '@nuxtjs/i18n',
   ],
+  i18n: {
+    locales: ['en', 'fa'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          login: 'Login',
+          
+        },
+        fa: {
+          login: 'ورود'
+        },
+        
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
